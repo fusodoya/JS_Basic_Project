@@ -61,6 +61,7 @@ function showPerson(person) {
 }
 // show next person
 nextBtn.addEventListener('click', function () {
+  console.log('next');
   currentItem++;
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
@@ -69,6 +70,7 @@ nextBtn.addEventListener('click', function () {
 });
 // show prev person
 prevBtn.addEventListener('click', function () {
+  console.log('previos');
   currentItem--;
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
@@ -77,7 +79,7 @@ prevBtn.addEventListener('click', function () {
 });
 // show random person
 randomBtn.addEventListener('click', function () {
-  console.log('hello');
+  console.log('random');
 
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson(currentItem);
