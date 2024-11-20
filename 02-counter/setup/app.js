@@ -2,6 +2,13 @@ var cnt = 0;
 
 const value = document.querySelector("#value");
 function show() {
+    if (cnt > 0) {
+        value.style.color = "green";
+    } else if (cnt < 0) {
+        value.style.color = "red";
+    } else {
+        value.style.color = "black";
+    }
     value.textContent = cnt;
 }
 
